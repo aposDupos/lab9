@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<a href="index.html">
+    <h3>На главную</h3>
+</a>
+<a href="ex2.html">
+    <h3>Задание 2</h3>
+</a>
+<a href="ex3.html">
+    <h3>Задание 3</h3>
+</a>
+<a href="ex4.html">
+    <h3>Задание 4</h3>
+</a>
+<script>
+    const coffee = {
+        brand: "Lavazza",
+        type: "молотый",
+        price: 250
+    }
+    let property = "Список свойств: "
+    Object.keys(coffee).forEach(el => property+=el+", ")
+    console.log(property.slice(0, property.length-2))
+    console.log(`Кофе ${coffee.brand} - ${coffee.type}, его стоимость - ${coffee.price} руб.`)
+</script>
+</body>
+</html>
