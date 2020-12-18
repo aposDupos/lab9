@@ -11,5 +11,34 @@
 <a href="ex4.html">
     <h3>Задание 4</h3>
 </a>
+<script>
+    function isPalindrome1(el) {
+        el.toLowerCase()
+        const elLength = el.length
+        const elMidLength = Math.floor(elLength / 2)
+        for (let i = 0; i < elMidLength; i++) {
+            if (el[i] !== el[elLength - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function isPalindrome2(el) {
+        return el === el.split('').reverse().join('');
+    }
+
+    const words = ["dom", "dod", "lllooolll", "okokokok"]
+    console.log("Первый способ")
+    words.forEach(el => {
+        const palindromeBool = isPalindrome1(el) ? "палиндром" : "не палиндром"
+        console.log(`Слово ${el} - ${palindromeBool}`)
+    })
+    console.log("\nВторой способ")
+    words.forEach(el => {
+        const palindromeBool = isPalindrome2(el) ? "палиндром" : "не палиндром"
+        console.log(`Слово ${el} - ${palindromeBool}`)
+    })
+</script>
 </body>
 </html>
