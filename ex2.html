@@ -14,5 +14,17 @@
 <a href="ex4.html">
     <h3>Задание 4</h3>
 </a>
+<script>
+    function arrayCut(animeArray) {
+        const animeArrayLength = animeArray.length
+        for (let i = 0; i < animeArrayLength - 1; i++) {
+            console.log(animeArray.pop() + " осталось " + animeArray)
+        }
+        console.log(animeArray[0])
+    }
+
+    let anime = ["Naruto", "Tokyo Ghoul", "Attack on Titan", "Weathering with You"]
+    arrayCut(anime)
+</script>
 </body>
 </html>
