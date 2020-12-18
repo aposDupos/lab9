@@ -8,6 +8,24 @@
 <a href="index.html">
     <h3>На главную</h3>
 </a>
+<script>
+    function matrixScalarMultiplication(multNum, matrixM) {
+        console.log('Обработанный массив:')
+        matrixM.forEach(el => {
+            for (let i = 0; i < el.length; i++) {
+                el[i] *= multNum
+            }
+            console.log('' + el)
+        })
+    }
 
+    let matrixM = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    const multNum = 4
+    console.log('Искходный массив:')
+    matrixM.forEach(el => {
+        console.log('' + el)
+    })
+    matrixScalarMultiplication(multNum, matrixM)
+</script>
 </body>
 </html>
